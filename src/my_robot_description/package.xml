@@ -3,8 +3,8 @@
 <package format="3">
   <name>my_robot_description</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="javier@todo.todo">javier</maintainer>
+  <description>URDF and xacro files describing the robot for ROS 2 simulation and visualization</description>
+  <maintainer email="ivanfdezg@hotmail.com">ivan</maintainer>
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
