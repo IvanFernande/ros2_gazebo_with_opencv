@@ -26,7 +26,7 @@ This project simulates a robot in a Gazebo environment. In addition to the simul
 - **Gazebo Fortress**
 - **Python 3.10**
 - **OpenCV** and **cv_bridge**
-- **Imported models from the [gazebo_models](https://github.com/osrf/gazebo_models.git) directory in Gazebo**
+- **Imported in Gazebo the models from the [gazebo_models](https://github.com/osrf/gazebo_models.git) directory**
 
 ## Installation
 
@@ -46,13 +46,14 @@ source install/setup.bash
 ```
 
 ### Step 3: Install Additional Dependencies
-
+If you don’t have `cv_bridge` or `OpenCV` installed, you can install them with the following commands:
 ```bash
 sudo apt update
 sudo apt install ros-humble-cv-bridge python3-opencv
 ```
 
 ## File Structure
+The project file structure is as follows:
 ```bash
 .
 └── src
@@ -97,3 +98,14 @@ sudo apt install ros-humble-cv-bridge python3-opencv
             ├── test_flake8.py
             └── test_pep257.py
 ```
+
+## Usage
+### Launch Simulation in Gazebo and Vision Node with OpenCV
+To start the Gazebo simulation and process the camera image in OpenCV, use the following command:
+```bash
+ros2 launch my_robot_bringup my_robot_complete_launch.py
+```
+This will launch:
+- Gazebo with the robot and the defined environment in test_world.world.
+- RViz to visualize the robot model and camera.
+- The image processing node using OpenCV.
