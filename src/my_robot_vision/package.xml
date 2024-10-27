@@ -4,7 +4,7 @@
   <name>my_robot_vision</name>
   <version>0.0.0</version>
   <description>Vision package for processing camera images with OpenCV</description>
-  <maintainer email="javier@todo.todo">javier</maintainer>
+  <maintainer email="ivanfdezg@hotmail.com">ivan</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>rclpy</depend>
