@@ -12,9 +12,17 @@ This project integrates a simulated robot in **ROS 2** using **Gazebo** and imag
 
 ## Description
 
-This project simulates a robot in a Gazebo environment. In addition to the simulation, the robot’s camera output is processed with **OpenCV**, allowing for real-time image analysis.
-
 ![image](https://github.com/user-attachments/assets/601c1360-51ef-43f5-bb9b-b9e0d2590350)
+
+This project simulates a mobile robot in ROS 2 using Gazebo for physical simulation and RViz for visualization. The robot model is designed in a modular way, with specific components for the base, wheels, and an onboard camera that provides real-time images for processing.
+
+The robot’s base is configured as a differential drive system, allowing independent control of the side wheels to perform complex turning and movement. Each wheel and the main body of the robot are modeled with detailed physical properties, including mass, inertia, and collisions. These properties are defined using reusable macros, making future expansions and adjustments easier. The Gazebo setup includes specific controllers for differential drive, enabling velocity commands through ROS topics and providing odometry data to track the robot’s real-time position and orientation within the simulated environment.
+
+The robot's camera is designed to transmit real-time images via ROS topics, allowing integration with image-processing nodes based on OpenCV. The camera is positioned on the robot through links and joints that ensure proper placement on the robot’s body. Additionally, it includes sensors configured to provide views in both RViz and Gazebo, facilitating visual monitoring and data capture.
+
+A dedicated image-processing node, implemented in Python and using OpenCV, complements the camera’s functionality. In the project, you will see two topics with the same functionality (/camera_sensor_rviz and camera_sensor_opencv). This is because during the development of this project, I read that some users reported certain errors in the compatibility between the images obtained from Gazebo with OpenCV. Therefore, in the camera definition, the axes are rotated to have the origin in the upper left corner, as is the convention in image processing. For the example, the node subscribes to the /camera_sensor_opencv/image_raw topic, where it receives and processes images in real time. With the help of cv_bridge, the images received in ROS format are converted to a format compatible with OpenCV, enabling advanced image-processing tasks. In this case, the images are displayed in a window titled "Robot Camera Feedback," which supports the development and testing of vision algorithms, such as object detection and navigation.
+
+The design of this project in ROS 2 leverages the flexibility of URDF and Xacro files to maintain a dynamic and easily adaptable model. This allows the robot to realistically simulate navigation, obstacle detection, and image processing, providing a versatile platform for testing and development in controlled environments.
 
 
 ### Main Components
@@ -36,7 +44,7 @@ This project simulates a robot in a Gazebo environment. In addition to the simul
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/your_username/ROS2_GAZEBO_AND_OPENCV.git
+git clone https://github.com/IvanFernande/ros2_gazebo_with_opencv.git
 cd ROS2_GAZEBO_AND_OPENCV
 ```
 
