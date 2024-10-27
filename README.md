@@ -14,6 +14,9 @@ This project integrates a simulated robot in **ROS 2** using **Gazebo** and imag
 
 This project simulates a robot in a Gazebo environment. In addition to the simulation, the robot’s camera output is processed with **OpenCV**, allowing for real-time image analysis.
 
+![image](https://github.com/user-attachments/assets/aeb61be4-0067-47af-83f3-b69a465f6fc1)
+
+
 ### Main Components
 - **my_robot_bringup**: Launch scripts to start Gazebo, RViz, and the vision node.
 - **my_robot_description**: URDF and Xacro files describing the robot model.
