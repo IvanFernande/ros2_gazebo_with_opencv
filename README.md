@@ -1,7 +1,7 @@
 # ROS 2 Gazebo and OpenCV Project
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/52c307a1-2463-484b-b286-897a9b1ac7f2" alt="Imagen 1" width="300" />
+  <img src="https://github.com/user-attachments/assets/52c307a1-2463-484b-b286-897a9b1ac7f2" alt="Imagen 1" width="250" />
   <img src="https://github.com/user-attachments/assets/5be885e3-b179-417e-84e2-627b6869d34b" alt="Imagen 2" width="400" />
   <img src="https://github.com/user-attachments/assets/ebf3549a-53c3-40d4-8126-274a79189442" alt="Imagen 3" width="200" />
 </p>
