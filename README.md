@@ -1,7 +1,10 @@
 # ROS 2 Gazebo and OpenCV Project
 
-| ![Gazebo](https://github.com/user-attachments/assets/52c307a1-2463-484b-b286-897a9b1ac7f2) | ![RViz](https://github.com/user-attachments/assets/83f99479-1972-4e95-97f6-c6b0245d60e7) | ![OpenCV](https://github.com/user-attachments/assets/81e35312-7660-4ba9-8b01-977014b7f9f1)|
-|:-------------------------------:|:-------------------------------:|:-------------------------------:|
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/52c307a1-2463-484b-b286-897a9b1ac7f2/imagen1.png" alt="Imagen 1" width="200" />
+  <img src="https://github.com/user-attachments/assets/5be885e3-b179-417e-84e2-627b6869d34b" alt="Imagen 2" width="200" />
+  <img src="https://github.com/user-attachments/assets/52c307a1-2463-484b-b286-897a9b1ac7f2/imagen3.png" alt="Imagen 3" width="200" />
+</p>
 
 
 This project integrates a simulated robot in **ROS 2** using **Gazebo** and image processing with **OpenCV**. The project includes launch configurations for simulation and visualization in RViz.
