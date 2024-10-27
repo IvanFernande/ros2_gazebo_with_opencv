@@ -109,3 +109,8 @@ This will launch:
 - Gazebo with the robot and the defined environment in test_world.world.
 - RViz to visualize the robot model and camera.
 - The image processing node using OpenCV.
+
+## License
+This project is licensed under the Apache 2.0 License. For more details, see the LICENSE file.
+
+This version of the `README.md` should help make the project accessible to a broader audience. Let me know if you’d like any additional details added!
