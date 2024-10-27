@@ -26,7 +26,7 @@ Este proyecto simula un robot en un entorno de Gazebo. Además de la simulación
 - **Gazebo Fortress**
 - **Python 3.10**
 - **OpenCV** y **cv_bridge**
-- **Descargar modelos para gazebo del directorio [gazebo_models](https://github.com/osrf/gazebo_models.git)
+- **Haber importado en gazebo los modelos del directorio [gazebo_models](https://github.com/osrf/gazebo_models.git)**
 
 ## Instalación
 
