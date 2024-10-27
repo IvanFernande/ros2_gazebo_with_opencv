@@ -1,37 +1,99 @@
 # ROS 2 Gazebo and OpenCV Project
 
-Este proyecto integra un robot simulado en **ROS 2** usando **Gazebo** y procesamiento de imágenes con **OpenCV**. El proyecto incluye configuración de lanzamientos para simulación y visualización en RViz.
+This project integrates a simulated robot in **ROS 2** using **Gazebo** and image processing with **OpenCV**. The project includes launch configurations for simulation and visualization in RViz.
 
-## Tabla de Contenidos
-- [Descripción](#descripción)
-- [Requisitos](#requisitos)
-- [Instalación](#instalación)
-- [Estructura de Archivos](#estructura-de-archivos)
-- [Uso](#uso)
-- [Licencia](#licencia)
+## Table of Contents
+- [Description](#description)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [File Structure](#file-structure)
+- [Usage](#usage)
+- [License](#license)
 
-## Descripción
+## Description
 
-Este proyecto simula un robot en un entorno de Gazebo. Además de la simulación, se procesa la salida de la cámara del robot con **OpenCV**, lo que permite realizar análisis de imágenes en tiempo real.
+This project simulates a robot in a Gazebo environment. In addition to the simulation, the robot’s camera output is processed with **OpenCV**, allowing for real-time image analysis.
 
-### Componentes Principales
-- **my_robot_bringup**: Scripts de lanzamiento para iniciar Gazebo, RViz y el nodo de visión.
-- **my_robot_description**: Archivos URDF y Xacro para describir el modelo del robot.
-- **my_robot_vision**: Nodo de visión basado en OpenCV para procesamiento de imágenes.
+### Main Components
+- **my_robot_bringup**: Launch scripts to start Gazebo, RViz, and the vision node.
+- **my_robot_description**: URDF and Xacro files describing the robot model.
+- **my_robot_vision**: OpenCV-based vision node for image processing.
 
-## Requisitos
+## Requirements
 
 - **Ubuntu 22.04**
 - **ROS 2 Humble**
 - **Gazebo Fortress**
 - **Python 3.10**
-- **OpenCV** y **cv_bridge**
-- **Haber importado en gazebo los modelos del directorio [gazebo_models](https://github.com/osrf/gazebo_models.git)**
+- **OpenCV** and **cv_bridge**
+- **Imported models from the [gazebo_models](https://github.com/osrf/gazebo_models.git) directory in Gazebo**
 
-## Instalación
+## Installation
 
-### Paso 1: Clonar el Repositorio
+### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/tu_usuario/ROS2_GAZEBO_AND_OPENCV.git
+git clone https://github.com/your_username/ROS2_GAZEBO_AND_OPENCV.git
 cd ROS2_GAZEBO_AND_OPENCV
+```
+
+### Step 2: Set Up the ROS 2 Workspace
+
+```bash
+# From the workspace root
+colcon build
+source install/setup.bash
+```
+
+### Step 3: Install Additional Dependencies
+
+```bash
+sudo apt update
+sudo apt install ros-humble-cv-bridge python3-opencv
+```
+
+## File Structure
+```bash
+.
+└── src
+    ├── my_robot_bringup
+    │   ├── CMakeLists.txt
+    │   ├── launch
+    │   │   ├── my_robot_complete_launch.py
+    │   │   ├── my_robot_gazebo.launch.py
+    │   │   └── my_robot_gazebo.launch.xml
+    │   ├── package.xml
+    │   ├── rviz
+    │   │   └── urdf_config.rviz
+    │   └── worlds
+    │       └── test_world.world
+    ├── my_robot_description
+    │   ├── CMakeLists.txt
+    │   ├── launch
+    │   │   ├── display.launch.py
+    │   │   └── display.launch.xml
+    │   ├── package.xml
+    │   ├── rviz
+    │   │   └── urdf_config.rviz
+    │   └── urdf
+    │       ├── camera.xacro
+    │       ├── common_properties.xacro
+    │       ├── mobile_base_gazebo.xacro
+    │       ├── mobile_base.xacro
+    │       └── my_robot.urdf.xacro
+    └── my_robot_vision
+        ├── launch
+        │   └── camera_launch.py
+        ├── my_robot_vision
+        │   ├── camera_opencv_node.py
+        │   └── __init__.py
+        ├── package.xml
+        ├── resource
+        │   └── my_robot_vision
+        ├── setup.cfg
+        ├── setup.py
+        └── test
+            ├── test_copyright.py
+            ├── test_flake8.py
+            └── test_pep257.py
+```
